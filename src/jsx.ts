@@ -8,7 +8,15 @@ export function element<P = JSX.AnyProps>(
   return { type, props: { ...props!, children } };
 }
 
-export const FRAGMENT = Symbol('$F');
+export const FRAGMENT = (): null => {
+  throw new Error('must not be invoked');
+};
+export const DOCTYPE = (_props: { content: string }): null => {
+  throw new Error('must not be invoked');
+};
+export const COMMENT = (_props: { content: string }): null => {
+  throw new Error('must not be invoked');
+};
 
 // <https://html.spec.whatwg.org/multipage/syntax.html#void-elements>
 const VOID_ELEMENTS = new Set<string>([
@@ -39,6 +47,14 @@ export function renderToString(element: JSX.ComponentChild): string {
 
   if (element.type === FRAGMENT) {
     return renderToString(element.props.children);
+  } else if (element.type === DOCTYPE) {
+    return `<!DOCTYPE ${renderToString(
+      String(((element.props as unknown) as { content: string }).content),
+    )}>`;
+  } else if (element.type === COMMENT) {
+    return `<!-- ${renderToString(
+      String(((element.props as unknown) as { content: string }).content),
+    )} -->`;
   }
 
   if (typeof element.type === 'function') {

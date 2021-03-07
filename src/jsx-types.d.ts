@@ -19,7 +19,7 @@ declare global {
     type AnyProps = Record<PropertyKey, unknown>;
 
     interface VNode<P = AnyProps> {
-      type: ComponentType<P> | string | symbol;
+      type: ComponentType<P> | string;
       props: P & { children: ComponentChild };
     }
 

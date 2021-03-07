@@ -1,0 +1,27 @@
+extends: eslint-config-dmitmel/presets/node
+env:
+  node: true
+  browser: true
+parserOptions:
+  sourceType: module
+  ecmaVersion: 2019
+
+settings:
+  node:
+    tryExtensions: ['.tsx', '.ts', '.jsx', '.js', '.json']
+
+rules:
+  func-names: off
+  node/no-unsupported-features/es-syntax:
+    - error
+    - ignores:
+        - modules
+        - dynamicImport
+
+overrides:
+  - files: '**/*.{ts,tsx}'
+    extends: eslint-config-dmitmel/presets/typescript-with-type-checking-addon
+
+  - files: 'src/**/*.{ts,tsx}'
+    parserOptions:
+      project: 'tsconfig.json'

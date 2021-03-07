@@ -1,0 +1,18 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "build",
+    "sourceMap": true,
+    "strict": true,
+    "jsx": "react",
+    "jsxFactory": "jsx.element",
+    "jsxFragmentFactory": "jsx.FRAGMENT",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "CommonJS",
+    "target": "ES2019",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

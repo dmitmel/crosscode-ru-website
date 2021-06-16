@@ -126,7 +126,7 @@ function main(): void {
     console.log(`    interface ${typeName} extends HTMLAttributes {`);
     let emittedTagAttrs = new Set<string>();
     for (let attr of tag.attributes) {
-      if (emittedTagAttrs.has(attr.name)) continue;
+      if (emittedTagAttrs.has(attr.name) || emittedGlobalAttrs.has(attr.name)) continue;
       console.log(`      ${makeIdentifier(attr.name)}?: ${makeAttributeValues(attr)};`);
       emittedTagAttrs.add(attr.name);
     }

@@ -176,7 +176,6 @@ declare global {
       importance?: string;
       integrity?: string;
       referrerpolicy?: string;
-      title?: string;
     }
 
     interface HTMLMetaAttributes extends HTMLAttributes {
@@ -192,7 +191,6 @@ declare global {
       nonce?: string;
       type?: string;
       scoped?: "true" | "false" | boolean;
-      title?: string;
     }
 
     interface HTMLBodyAttributes extends HTMLAttributes {
@@ -215,12 +213,7 @@ declare global {
       bottommargin?: string;
       leftmargin?: string;
       link?: string;
-      onblur?: string;
-      onerror?: string;
-      onfocus?: string;
-      onload?: string;
       onredo?: string;
-      onresize?: string;
       onundo?: string;
       rightmargin?: string;
       text?: string;
@@ -412,7 +405,6 @@ declare global {
     }
 
     interface HTMLBdoAttributes extends HTMLAttributes {
-      dir?: string;
     }
 
     interface HTMLSpanAttributes extends HTMLAttributes {
@@ -493,7 +485,6 @@ declare global {
       codetype?: string;
       declare?: string;
       standby?: string;
-      tabindex?: string;
     }
 
     interface HTMLParamAttributes extends HTMLAttributes {
@@ -559,7 +550,6 @@ declare global {
       rel?: string;
       hreflang?: string;
       type?: string;
-      accesskey?: string;
     }
 
     interface HTMLTableAttributes extends HTMLAttributes {
@@ -629,7 +619,6 @@ declare global {
       novalidate?: "true" | "false" | boolean;
       target?: string;
       accept?: string;
-      autocapitalize?: string;
     }
 
     interface HTMLLabelAttributes extends HTMLAttributes {
@@ -652,7 +641,6 @@ declare global {
       formnovalidate?: "true" | "false" | boolean;
       formtarget?: string;
       height?: string;
-      inputmode?: "verbatim" | "latin" | "latin-name" | "latin-prose" | "full-width-latin" | "kana" | "kana-name" | "katakana" | "numeric" | "tel" | "email" | "url";
       list?: string;
       max?: string;
       maxlength?: string;
@@ -720,7 +708,6 @@ declare global {
       dirname?: string;
       disabled?: "true" | "false" | boolean;
       form?: string;
-      inputmode?: "verbatim" | "latin" | "latin-name" | "latin-prose" | "full-width-latin" | "kana" | "kana-name" | "katakana" | "numeric" | "tel" | "email" | "url";
       maxlength?: string;
       minlength?: string;
       name?: string;
@@ -729,8 +716,6 @@ declare global {
       required?: "true" | "false" | boolean;
       rows?: string;
       wrap?: "soft" | "hard";
-      autocapitalize?: string;
-      spellcheck?: string;
     }
 
     interface HTMLOutputAttributes extends HTMLAttributes {

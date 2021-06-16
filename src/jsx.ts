@@ -49,11 +49,11 @@ export function renderToString(element: JSX.ComponentChild): string {
     return renderToString(element.props.children);
   } else if (element.type === DOCTYPE) {
     return `<!DOCTYPE ${renderToString(
-      String(((element.props as unknown) as { content: string }).content),
+      String((element.props as unknown as { content: string }).content),
     )}>`;
   } else if (element.type === COMMENT) {
     return `<!-- ${renderToString(
-      String(((element.props as unknown) as { content: string }).content),
+      String((element.props as unknown as { content: string }).content),
     )} -->`;
   }
 

@@ -1,0 +1,2 @@
+**/*.d.ts -linguist-vendored
+/src/jsx-types-gen.d.ts linguist-generated
